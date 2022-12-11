@@ -25,7 +25,7 @@ $ pod install --repo-update
 To install using Swift Package Manager, add this to the `dependencies` section in your `Package.swift` file:
 
 ```swift
-.package(url: "https://github.com/elina-smnko/SwiftMathExpression.git",
+.package(url: "https://github.com/elina-smnko/SwiftMathExpression.git"),
 ```
 ## Usage
 
