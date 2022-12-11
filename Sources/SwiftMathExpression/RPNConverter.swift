@@ -32,7 +32,6 @@ class RPNConverter {
                     if  (currentOperator <= topOperator && currentOperator.associativity == .left) ||
                             (currentOperator < topOperator && currentOperator.associativity == .right)
                     {
-                        output.append(" ")
                         output.append(stack.pop())
                         continue
                     }
@@ -56,8 +55,6 @@ class RPNConverter {
                 // until the top token (from the stack) is left parenthesis
                 while !stack.isEmpty && !(stack.peek() == "(") {
                     // pop from the stack to the output
-                    
-                    output.append(" ")
                     output.append(stack.pop())
                 }
                 
@@ -72,21 +69,18 @@ class RPNConverter {
                 // if there is a function token at the top of the operator stack
                 // pop the function from the operator stack into the output queue
                 if !stack.isEmpty && MathExpression.functions.contains(function: stack.peek()) {
-                    output.append(" ")
                     output.append(stack.pop())
                 }
 
                 
             } else {
                 // token is not an operator or function, add it to the output
-                output.append(" ")
                 output.append(token)
             }
         }
         
         while !stack.isEmpty {
             // While there are still operator tokens in the stack, pop them to output
-            output.append(" ")
             output.append(stack.pop())
         }
         
