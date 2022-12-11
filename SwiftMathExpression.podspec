@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
 spec.name = 'SwiftMathExpression'
-spec.version = '1.0.0'
+spec.version = '1.0.1'
 spec.author = 'Elina S.'
 spec.license = { :type => 'MIT', :file => 'LICENSE' }
 spec.homepage = 'https://github.com/elina-smnko/SwiftMathExpression'

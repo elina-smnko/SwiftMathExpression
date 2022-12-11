@@ -84,8 +84,6 @@ class RPNConverter {
             output.append(stack.pop())
         }
         
-        output.removeFirst() // removing the first space
-        
         return output
     }
 
